@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SPR Cafe - Hazelnut</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='drinks.css') }}">
+</head>
+<body>
+    <div class = 'bg'>
+        <img src = "static/hazel.jpg" alt = "hazelnut" height = 250px/>
+        <h1>
+            Hazelnut.........Rs.150
+        </h1>
+        <p><a href="{{ url_for('add_to_cart', item='Hazelnut') }}" class = "button">Add to Cart</a></p>
+    </div>
+</body>
+</html>

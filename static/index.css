@@ -1,0 +1,43 @@
+/* index.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightsalmon;
+    background-image: url(hm.jpg);
+    background-position: bottom;
+    margin: 0;
+    padding: 0;
+}
+
+a:visited{
+    color:chocolate;
+}
+a:hover{
+    color:purple;
+}
+
+header {
+    background-image: url(cafe_head.png);
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 90px;
+}
+
+h1 {
+    text-align: center;
+    color: brown;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
+}
+p {
+    color: crimson;
+    text-align:center;
+    font-size: xx-large;
+    padding: 100px;
+    padding-left: 590px;
+}
+
+
+main {
+    padding: 20px;
+}

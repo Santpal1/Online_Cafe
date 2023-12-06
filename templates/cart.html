@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='cart.css') }}">
+</head>
+<div>
+<body>
+    <h1>Your Shopping Cart</h1>
+    <div class="cart-items">
+        {% if cart %}
+            <ul>
+                {% for item, quantity in cart.items() %}
+                <li>
+                    <span class="item-info">
+                        <span class="item-name">{{ item }}</span>
+                        <span class="item-quantity">Quantity: {{ quantity }}</span>
+                    </span>
+                    <span class="remove-button">
+                        <!-- Button to remove the item from the cart -->
+                        <form action="{{ url_for('remove_from_cart', item=item) }}" method="post">
+                            <button type="submit">Remove</button>
+                        </form>
+                    </span>
+                </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Your cart is empty.</p>
+        {% endif %}
+    </div>
+    <div class = "menu"><a href = "/menu" class = "button">Add more</a></div>
+</body>
+</div>
+</html>
